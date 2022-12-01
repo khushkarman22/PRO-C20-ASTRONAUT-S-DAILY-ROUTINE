@@ -10,7 +10,7 @@ function preload() {
   gym = loadAnimation("gym11.png", "gym12.png", "gym1.png", "gym2.png");
   eat = loadAnimation("eat1.png", "eat2.png");
   drink = loadAnimation("drink1.png", "drink2.png");
-  move = loadAnimation("move.png", "move1.png");
+  //move = loadAnimation("move.png", "move1.png");
   bath = loadAnimation("bath1.png", "bath2.png");
 }
 
@@ -23,50 +23,62 @@ function setup() {
 }
 
 function draw() {
-  background(bg);
-
+  background(bg);  
+  fill("white");
+  stroke("white");
+  textSize(30);
+  text("Instructions",130,100);
+  fill("white");
+  stroke("white");
+  textSize(20);
+  text("UP ARROW = BRUSHING",130,150);
+  fill("white");
+  stroke("white");
+  textSize(20);
+  text("DOWN ARROW = GYMING",130,200);
+  fill("white");
+  stroke("white");
+  textSize(20);
+  text("LEFT ARROW = EATING",130,250);
+  fill("white");
+  stroke("white");
+  textSize(20);
+  text("RIGHT ARROW = BATHING",130,300);
   fill("white");
   stroke("white");
   textSize(20);
 
-  text("Instructions",130,100);
-  text("UP ARROW = BRUSHING",130,150);
-  text("DOWN ARROW = GYMING",130,200);
-  text("LEFT ARROW = EATING",130,250);
-  text("RIGHT ARROW = BATHING",130,300);
-
   if(keyDown("UP_ARROW")){
-    astronaut.addAnimation("brushing", brush);
+    astronaut.addAnimation("brushing",brush);
     astronaut.changeAnimation("brushing");
     astronaut.y = 350;
-    astronaut.velocityY = 0;
     astronaut.velocityX = 0;
+    astronaut.velocityY = 0;
   }
 
   if(keyDown("DOWN_ARROW")){
-    astronaut.addAnimation("gyming", gym);
+    astronaut.addAnimation("gyming",gym);
     astronaut.changeAnimation("gyming");
     astronaut.y = 350;
-    astronaut.velocityY = 0;
     astronaut.velocityX = 0;
+    astronaut.velocityY = 0;
   }
 
   if(keyDown("LEFT_ARROW")){
-    astronaut.addAnimation("eating", eat);
+    astronaut.addAnimation("eating",eat);
     astronaut.changeAnimation("eating");
     astronaut.y = 350;
-    astronaut.velocityY = 0;
     astronaut.velocityX = 0;
+    astronaut.velocityY = 0;
   }
 
   if(keyDown("RIGHT_ARROW")){
-    astronaut.addAnimation("bathing", bath);
+    astronaut.addAnimation("bathing",bath);
     astronaut.changeAnimation("bathing");
     astronaut.y = 350;
-    astronaut.velocityY = 0;
     astronaut.velocityX = 0;
+    astronaut.velocityY = 0;
   }
 
   drawSprites();
 }
-
